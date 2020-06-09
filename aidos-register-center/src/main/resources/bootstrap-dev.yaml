@@ -1,0 +1,18 @@
+eureka:
+  ## dashboard
+  dashboard:
+    enabled: true
+    path: /rc
+  ## 服务中心
+  server:
+    ### 剔除失效客户端周期，默认60s
+    eviction-interval-timer-in-ms: 30000
+    ### 自我保护
+    enable-self-preservation: false
+  ## 客户端
+  client:
+    ### 客户端向注册中心注册
+    register-with-eureka: false
+    ### 客户端获取注册中心的实例列表
+    fetch-registry: false
+

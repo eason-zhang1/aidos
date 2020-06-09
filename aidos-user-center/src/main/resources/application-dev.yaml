@@ -1,0 +1,20 @@
+# Redis
+spring:
+  redis:
+    database: 3
+    host: localhost
+    password: test123
+
+  datasource:
+    url: jdbc:mysql://server1.modianli.com:3306/aidos?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+    username: mduser
+    password: test123654
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    open-in-view: false
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate.format-sql: true
+      hibernate.hbm2ddl.auto: update #none update
