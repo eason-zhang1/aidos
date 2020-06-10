@@ -72,7 +72,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 							 AuthenticationException.class,
 							 AccessDeniedException.class
   })
-  public ResponseEntity<ResponseMessage> badCredentialsException(BadCredentialsException ex) {
+  public ResponseEntity<ResponseMessage> badCredentialsException(RuntimeException ex) {
 	logger.warn("user exception: " + ex.getMessage());
 	return new ResponseEntity<>(ResponseMessage.danger(ex.getMessage()), HttpStatus.UNAUTHORIZED);
   }

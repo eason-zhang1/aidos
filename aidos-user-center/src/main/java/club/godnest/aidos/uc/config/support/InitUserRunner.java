@@ -48,7 +48,8 @@ public class InitUserRunner implements CommandLineRunner {
 
 	UserAccountDO user = new UserAccountDO();
 	user.setEmail("739663407@qq.com");
-	user.setName("hjzhang");
+	user.setName("eason zhang");
+	user.setUsername("hjzhang");
 	user.setPassword(passwordEncoder.encode("123456"));
 	user.setRoles(new HashSet<>(roles));
 	userAccountRepository.save(user);
