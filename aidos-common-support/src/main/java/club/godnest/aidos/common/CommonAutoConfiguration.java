@@ -7,7 +7,6 @@ import club.godnest.aidos.common.web.RestExceptionHandler;
 
 /**
  * @author H.J.Zhang
- * @since 2020-06-09
  */
 @Configuration
 public class CommonAutoConfiguration {

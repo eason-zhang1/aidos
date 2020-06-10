@@ -8,7 +8,6 @@ import club.godnest.aidos.uc.modular.user.service.AbstractUserAccountService;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Service
 public class UserAccountServiceImpl extends AbstractUserAccountService {

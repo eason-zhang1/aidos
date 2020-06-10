@@ -10,7 +10,7 @@ import club.godnest.aidos.uc.AidosUserCenterApplication;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08 https://docs.spring.io/spring-data/jpa/docs/2.2.7.RELEASE/reference/html/#jpa.java-config
+ *  https://docs.spring.io/spring-data/jpa/docs/2.2.7.RELEASE/reference/html/#jpa.java-config
  */
 @Configuration
 @EnableJpaRepositories(basePackageClasses = AidosUserCenterApplication.class)

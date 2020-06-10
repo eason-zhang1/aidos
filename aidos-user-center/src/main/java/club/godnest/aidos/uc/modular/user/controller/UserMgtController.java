@@ -17,7 +17,6 @@ import lombok.AllArgsConstructor;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @RestController
 @RequestMapping(Constants.USER_MGT_URL)

@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Entity
 @Table(name = "user_account", uniqueConstraints = {

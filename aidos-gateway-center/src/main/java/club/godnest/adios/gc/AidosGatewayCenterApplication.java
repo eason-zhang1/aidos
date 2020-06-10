@@ -1,21 +1,17 @@
-package club.godnest.aidos.uc;
+package club.godnest.adios.gc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import club.godnest.aidos.rbac.EnableRBAC;
-
 /**
  * @author H.J.Zhang
  */
-// @SpringCloudApplication
-@EnableRBAC
-@SpringBootApplication
 @EnableDiscoveryClient
-public class AidosUserCenterApplication {
+@SpringBootApplication
+public class AidosGatewayCenterApplication {
 
   public static void main(String[] args) {
-	SpringApplication.run(AidosUserCenterApplication.class, args);
+	SpringApplication.run(AidosGatewayCenterApplication.class, args);
   }
 }

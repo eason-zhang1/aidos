@@ -2,7 +2,6 @@ package club.godnest.aidos.uc.config;
 
 /**
  * @author H.J.Zhang
- * @since 2020-06-09
  */
 public interface Constants {
 

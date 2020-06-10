@@ -5,15 +5,18 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import club.godnest.aidos.common.jpa.AbstractEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Entity
 @Table(name = "user_role")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class RoleDO extends AbstractEntity<Long> {
 
   private static final long serialVersionUID = 5088750607679795883L;

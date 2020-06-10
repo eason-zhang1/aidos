@@ -13,7 +13,6 @@ import lombok.Setter;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @MappedSuperclass
 @Getter

@@ -9,12 +9,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
  * 默认的权限配置
  *
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Configuration
-@ConditionalOnMissingBean(SecurityConfig.class)
+@ConditionalOnMissingBean(AbstractSecurityConfig.class)
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
-public class DefaultSecurityConfig extends SecurityConfig {
+public class DefaultSecurityConfig extends AbstractSecurityConfig {
 
 }

@@ -24,6 +24,7 @@
         <module>aidos-user-center</module>
         <module>aidos-rbac</module>
         <module>aidos-common-support</module>
+        <module>aidos-gateway-center</module>
     </modules>
 
     <properties>

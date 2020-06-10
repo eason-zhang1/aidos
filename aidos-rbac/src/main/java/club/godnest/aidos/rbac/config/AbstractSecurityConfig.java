@@ -35,7 +35,7 @@ import static java.util.Arrays.*;
  * @see DefaultSecurityConfig
  * @since 2020-04-28
  */
-public abstract class SecurityConfig extends WebSecurityConfigurerAdapter {
+public abstract class AbstractSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Autowired
   private PasswordEncoder passwordEncoder;

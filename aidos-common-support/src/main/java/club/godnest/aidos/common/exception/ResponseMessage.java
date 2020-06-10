@@ -4,7 +4,6 @@ import lombok.Data;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Data
 public class ResponseMessage {

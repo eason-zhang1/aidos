@@ -13,7 +13,6 @@ import club.godnest.aidos.rbac.config.RedisHttpSessionConfig;
 
 /**
  * @author H.J.Zhang
- * @since 2020-06-08
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

@@ -26,7 +26,6 @@ import static org.springframework.security.web.context.HttpSessionSecurityContex
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 @Log4j2
 @RestController

@@ -1,10 +1,10 @@
-# Redis
 spring:
+  ## Redis
   redis:
     database: 3
     host: localhost
     password: test123
-
+  ## DB
   datasource:
     url: jdbc:mysql://server1.modianli.com:3306/aidos?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
     username: mduser

@@ -9,7 +9,6 @@ import club.godnest.aidos.uc.modular.user.entity.UserAccountDO;
 
 /**
  * @author H.J.Zhang
- * @since 2020-05-08
  */
 public interface UserAccountRepository extends JpaRepository<UserAccountDO, Long>, JpaSpecificationExecutor<UserAccountDO> {
 
