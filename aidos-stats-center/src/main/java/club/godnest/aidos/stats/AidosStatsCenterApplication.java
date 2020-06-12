@@ -1,8 +1,9 @@
-package club.godnest.aidos.cms;
+package club.godnest.aidos.stats;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import club.godnest.aidos.rbac.EnableRBAC;
 
@@ -12,11 +13,11 @@ import club.godnest.aidos.rbac.EnableRBAC;
  */
 @EnableRBAC
 @EnableDiscoveryClient
+@EnableFeignClients
 @SpringBootApplication
-public class AidosCmsCenterApplication {
+public class AidosStatsCenterApplication {
 
   public static void main(String[] args) {
-	SpringApplication.run(AidosCmsCenterApplication.class, args);
+	SpringApplication.run(AidosStatsCenterApplication.class, args);
   }
-
 }

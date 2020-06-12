@@ -1,7 +1,10 @@
 package club.godnest.aidos.cms.service;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 import java.util.List;
 
+import club.godnest.aidos.cms.config.Constants;
 import club.godnest.aidos.cms.model.ContentVO;
 
 /**
@@ -10,5 +13,6 @@ import club.godnest.aidos.cms.model.ContentVO;
  */
 public interface IContentService {
 
+  @GetMapping(Constants.CMS_MGT_URL + "/contents")
   List<ContentVO> topKNewContent();
 }

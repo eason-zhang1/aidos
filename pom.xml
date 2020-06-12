@@ -34,6 +34,7 @@
         <module>aidos-gateway-center</module>
         <module>aidos-cms</module>
         <module>aidos-log</module>
+        <module>aidos-stats-center</module>
     </modules>
 
     <properties>
@@ -76,6 +77,11 @@
                 <version>${aidos.component.verson}</version>
             </dependency>
 
+            <dependency>
+                <groupId>club.godnest.aidos</groupId>
+                <artifactId>cms-center</artifactId>
+                <version>${aidos.component.verson}</version>
+            </dependency>
             <!--Spring Cloud 相关依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

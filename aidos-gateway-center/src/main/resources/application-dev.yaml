@@ -8,14 +8,18 @@ spring:
         - id: uc
           uri: lb://user-center
           predicates:
-            - Path=/uc/**
+            - Path=/api/pub/user/**,/api/mgt/user/**
           filters:
-            - StripPrefix=1
             - name: CircuitBreaker
         - id: cms
           uri: lb://cms-center
           predicates:
-            - Path=/cms/**
+            - Path=/api/pub/cms/**,/api/mgt/cms/**
           filters:
-            - StripPrefix=1
+            - name: CircuitBreaker
+        - id: stats
+          uri: lb://stats-center
+          predicates:
+            - Path=/api/pub/stats/**,/api/mgt/stats/**
+          filters:
             - name: CircuitBreaker

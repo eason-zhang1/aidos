@@ -1,0 +1,16 @@
+spring:
+  ## Redis
+  redis:
+    database: 3
+    host: localhost
+    password: test123
+## 开启feign容错
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connect-timeout: 500
+        read-timeout: 500
+        retryer: feign.Retryer.Default

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: stats-center
+server:
+  port: 31010
