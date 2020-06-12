@@ -70,6 +70,12 @@
                 <version>${aidos.component.verson}</version>
             </dependency>
 
+            <dependency>
+                <groupId>club.godnest.aidos</groupId>
+                <artifactId>cms-support</artifactId>
+                <version>${aidos.component.verson}</version>
+            </dependency>
+
             <!--Spring Cloud 相关依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

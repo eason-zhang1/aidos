@@ -14,11 +14,14 @@
     <description>cms component</description>
 
     <modules>
-        <module>cms-provider</module>
-        <module>cms-api</module>
+        <module>cms-center</module>
+        <module>cms-support</module>
     </modules>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 </project>

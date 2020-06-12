@@ -21,7 +21,7 @@ public class GatewayConfig {
   public Customizer<ReactiveResilience4JCircuitBreakerFactory> defaultCustomizer() {
 	return factory -> factory.configureDefault(id -> new Resilience4JConfigBuilder(id)
 		.circuitBreakerConfig(CircuitBreakerConfig.ofDefaults()) // 熔断配置
-		.timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(500)).build()) // 超时配置
+		.timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(1000)).build()) // 超时配置
 		.build());
   }
 }

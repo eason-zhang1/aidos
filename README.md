@@ -1,6 +1,10 @@
 ## 项目介绍
 > 基于`Spring Cloud`的`Hoxton.SR3`版本开发的学习项目
 
+架构如下:
+![架构图](map.jpg)
+
+
 ### 权限配置:`aidos-rbac`
 > 基于`Spring Security`的权限校验,具体配置参照`AsbstractSecurityConfig`.
 
@@ -42,8 +46,12 @@ logging:
 * maven的plugin指定`maven-resources-plugin`
 
 
+## 项目启动
+* actives profiles: **dev, logd**
+* Maven goal: **clean -am -pl :<artifactId> prepare-package -DskipTests**
+
+
 ## TODO LIST
-* 项目启动
 * 服务调用
 * 前端
 * 链路追踪

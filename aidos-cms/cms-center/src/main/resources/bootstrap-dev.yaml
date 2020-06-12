@@ -1,0 +1,22 @@
+# 注册中心配置
+eureka:
+  ## 服务中心
+  server:
+    port: 28080
+  ## 客户端
+  client:
+    ### 客户端向注册中心注册
+    register-with-eureka: true
+    ### 客户端获取注册中心的实例列表
+    fetch-registry: true
+    ### 客户端要注册的地址
+    service-url:
+      defaultZone: http://localhost:${eureka.server.port:28080}/eureka
+  ## 实例
+  instance:
+    ### 实例以 IP 的形式注册
+    prefer-ip-address: true
+    ### 实例以20s的周期续租
+    lease-renewal-interval-in-seconds: 20
+    ### 实例在50s未续约被剔除
+    lease-expiration-duration-in-seconds: 50

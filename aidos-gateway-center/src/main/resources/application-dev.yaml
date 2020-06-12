@@ -12,3 +12,10 @@ spring:
           filters:
             - StripPrefix=1
             - name: CircuitBreaker
+        - id: cms
+          uri: lb://cms-center
+          predicates:
+            - Path=/cms/**
+          filters:
+            - StripPrefix=1
+            - name: CircuitBreaker

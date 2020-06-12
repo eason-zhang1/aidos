@@ -9,5 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <version>1.0.0</version>
-    <artifactId>cms-provider</artifactId>
+    <artifactId>cms-support</artifactId>
+
+    <dependencies>
+
+    </dependencies>
+
 </project>
