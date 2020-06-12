@@ -1,0 +1,7 @@
+logging:
+  file:
+    path: D://data//logs
+    name: ${logging.file.path}//${spring.application.name}.log
+  level:
+    club.godnest.aidos: debug
+    org.springframework.orm: debug
