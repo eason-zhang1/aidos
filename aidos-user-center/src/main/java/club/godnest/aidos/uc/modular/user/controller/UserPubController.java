@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import club.godnest.aidos.common.lock.aop.RedisClusterLockable;
 import club.godnest.aidos.uc.config.Constants;
 import club.godnest.aidos.uc.modular.user.model.AuthenticationToken;
 import club.godnest.aidos.uc.modular.user.service.AbstractUserAccountService;
@@ -36,6 +37,7 @@ public class UserPubController {
   private AbstractUserAccountService userAccountService;
 
   @PostMapping("/login")
+  @RedisClusterLockable(name = "aidos:uc:login", key = "#username")
   public AuthenticationToken login(String username, String pwd, HttpServletRequest request) {
 	log.debug("登录用户->{}, {}", username, pwd);
 	Authentication authentication = userAccountService.login(username, pwd);

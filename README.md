@@ -12,6 +12,18 @@
 ### 支持中心: `aidos-common-support`
 > 常用的工具包, 以及自定义的组件
 
+* exception 包
+    >全局异常定义
+
+* jpa 包
+    > Jpa相关的超类
+    
+* web 包
+    > 全局web异常捕获的定义
+          
+* lock 包
+    > 基于Redisson分布式锁
+
 ### 全局日志: `aidos-log`
 `application-logd.yaml`
 ```yaml
@@ -28,6 +40,7 @@ logging:
 在其他module中, 导入`aido-log`时, 应指定如下配置
 * spring.profiles.active指定logd
 * maven的plugin指定`maven-resources-plugin`
+
 
 ## TODO LIST
 * 项目启动

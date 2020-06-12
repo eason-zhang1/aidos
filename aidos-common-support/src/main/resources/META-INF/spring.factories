@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+club.godnest.aidos.common.CommonAutoConfiguration,\
+club.godnest.aidos.common.lock.RedisClusterLockingAutoConfiguration
