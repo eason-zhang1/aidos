@@ -21,12 +21,16 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.Resource;
+
+import club.godnest.aidos.rbac.interceptor.XAuthTokenWebInterceptor;
 
 import static java.util.Arrays.*;
 
@@ -35,7 +39,7 @@ import static java.util.Arrays.*;
  * @see DefaultSecurityConfig
  * @since 2020-04-28
  */
-public abstract class AbstractSecurityConfig extends WebSecurityConfigurerAdapter {
+public abstract class AbstractSecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
   @Autowired
   private PasswordEncoder passwordEncoder;
@@ -130,5 +134,12 @@ public abstract class AbstractSecurityConfig extends WebSecurityConfigurerAdapte
   @Resource(type = RedisIndexedSessionRepository.class)
   public SpringSessionBackedSessionRegistry sessionRegistry(RedisIndexedSessionRepository redisIndexedSessionRepository) {
 	return new SpringSessionBackedSessionRegistry(redisIndexedSessionRepository);
+  }
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~MVC Configurer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  @Override
+  public void addInterceptors(InterceptorRegistry registry) {
+	registry.addInterceptor(new XAuthTokenWebInterceptor()).addPathPatterns("/**");
   }
 }

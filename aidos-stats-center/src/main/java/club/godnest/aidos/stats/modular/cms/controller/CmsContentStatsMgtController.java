@@ -14,8 +14,6 @@ import club.godnest.aidos.stats.modular.cms.service.CmsContentService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import static club.godnest.aidos.rbac.config.Constants.*;
-
 /**
  * @author H.J.Zhang
  * @since 2020-06-12
@@ -30,7 +28,6 @@ public class CmsContentStatsMgtController {
 
   @GetMapping("/contents")
   public List<ContentVO> contentStats(HttpServletRequest request) {
-	System.getProperties().setProperty(X_AUTH_TOKEN, request.getHeader(X_AUTH_TOKEN));
 	return contentService.topKNewContent();
   }
 
